@@ -1,0 +1,56 @@
+<div class="  page">
+    <div class="d-flex page__box p-3 mt-2">Add Product</div>
+    <div class="page__content shadow p-2 position-relative">
+      <div class="page__content-data position-absolute text-center">
+        <div style="font-size: 17px" mat-dialog-content>
+          <form [formGroup]="productForm" action="">
+            <mat-form-field appearance="outline">
+            <mat-label>Product Name</mat-label>
+            <input  formControlName="productname" matInput placeholder="Levomin">
+          </mat-form-field>
+  
+          <mat-form-field color="accent" appearance="outline">
+            <mat-label>Issue Date</mat-label>
+            <input formControlName="issuedate" matInput [matDatepicker]="picker1">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+  
+          <mat-form-field color="accent" appearance="outline">
+            <mat-label>Expire Date</mat-label>
+            <input formControlName="expiredate" matInput [matDatepicker]="picker2">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2 color="primary"></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label> Cost Price</mat-label>
+            <input formControlName="costprice" matInput placeholder="eg:1200">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label> Sell Price</mat-label>
+            <input formControlName="sellprice" matInput placeholder="eg:1500">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label> Quantity</mat-label>
+            <input formControlName="quantity" matInput placeholder="eg:150">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label> Description</mat-label>
+            <textarea  formControlName="desc" matInput placeholder="eg: for painkiller "></textarea>
+          </mat-form-field>
+          </form>
+          <div class="buttonsave" mat-dialog-action [align]="'end'">
+            <button mat-fab color="warn" mat-dialog-close>Close</button>
+            <span class="p-3"> </span>
+            <button mat-fab color="primary" mat-dialog-close  (click)="addProduct()" > {{actionBtn}}</button>
+            
+          </div>
+  
+  
+  
+        </div>
+      </div>
+    </div>
+  </div>

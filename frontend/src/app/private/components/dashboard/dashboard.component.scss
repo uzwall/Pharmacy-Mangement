@@ -1,0 +1,57 @@
+@import "../home/home.component.scss";
+
+.grid-container {
+  margin: 20px;
+}
+
+.dashboard-card  {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+.red{
+  background-color: red;
+ }
+ .yellow{
+  background-color: yellow;
+ }
+ .green{
+  background-color: rgb(12, 200, 12);
+ }
+ .blue{
+  background-color: blue;
+ }
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card-content  {
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 100%;
+  justify-content: center;
+  align-items: stretch;
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+}
+.pie{
+  margin-left: 130px;
+  width: 400px;
+  height: 400px;
+}
+.radar{
+  margin-left: 125px;
+  width: 415px;
+  height: 415px;
+}

@@ -1,0 +1,75 @@
+
+  ::ng-deep .mat-menu-panel .profile-dropdown { 
+   
+  width: 100%! important;
+    
+}
+
+.sizeformenu  {
+  // position: relative;
+  display: inline-flex;
+
+  
+ 
+  
+ }
+
+
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+}
+
+
+.example-spacer {
+  flex: auto;
+}
+
+.notification {
+
+  flex: 1 1 auto;
+  left: 2900%;
+}
+
+
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+button {
+  outline: none;
+  border: 0;
+  background: transparent;
+}
+
+.user {
+  font-size: 14px;
+  position: relative;
+  bottom: 8px;
+}
+
+mat-toolbar {
+  background: white;
+}
+
+.user-image {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+
+  &-icon {
+    height: 18px;
+    font-size: 16px;
+  }
+}
+
+::ng-deep {
+  .mat-menu-content {
+    width: auto;
+  }
+}

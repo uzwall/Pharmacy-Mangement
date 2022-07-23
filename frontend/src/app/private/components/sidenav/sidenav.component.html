@@ -1,0 +1,28 @@
+<mat-nav-list >
+    <div class="logo py-4"> ADMIN
+        <!-- <img src="../../../../assets/AdminLogo.png" alt="Admin logo" > -->
+    </div>
+    <mat-divider></mat-divider>
+    <h2 matSubheader class="mt-2">Main</h2>
+    <a mat-list-item routerLink="./dashboard" routerLinkActive="list-item-active">
+        <mat-icon>dashboard</mat-icon> Dashboard
+    </a>
+
+    <a mat-list-item routerLink="./home" routerLinkActive="list-item-active">
+        <mat-icon>home</mat-icon> Home
+    </a>
+
+    <h2 matSubheader class="mt-2">Info</h2>
+   
+    <a mat-list-item routerLink="./addproductnav" routerLinkActive="list-item-active"   (click)="openDialog()"  >
+        <mat-icon>library_add</mat-icon> Add Products
+    </a>
+    
+    <a mat-list-item routerLink="./showtable" routerLinkActive="list-item-active" >
+        <mat-icon>library_books</mat-icon> Show Products
+    </a>
+    <a mat-list-item routerLink="./smarttable" routerLinkActive="list-item-active">
+        <mat-icon>ballot</mat-icon> Smart Table
+    </a>
+
+</mat-nav-list>

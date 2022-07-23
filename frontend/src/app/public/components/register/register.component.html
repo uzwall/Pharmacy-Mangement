@@ -1,0 +1,40 @@
+<div class="container">
+    <div>
+        <div class="login">
+            <a [routerLink]="['../login']"><button mat-button>Go to login Page</button> </a>
+        </div>
+        <div>
+            <mat-card class="card my-auto shadow">
+                <mat-card-title>Register</mat-card-title>
+                <mat-card-content>
+                    <form [formGroup]="form" (ngSubmit)="register()" >
+                        <mat-form-field>
+                           
+                            <input type="email" matInput placeholder=" Email" formControlName="email">
+                            <mat-error *ngIf="email.touched && email.hasError('required')"> Email is Required</mat-error>
+                            <mat-error *ngIf="email.touched && email.hasError('email')"> Email must be valid</mat-error>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input type="text" matInput placeholder=" Username" formControlName="username">
+                            <mat-error *ngIf="username.touched && username.hasError('required')"> Username is Required</mat-error>
+                            <mat-error *ngIf ="username.touched && username.hasError('username')"> Username must be valid</mat-error> 
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input type="password" matInput placeholder=" Password" formControlName="password">
+                            <mat-error *ngIf="password.touched && password.hasError('required')"> Password is Required</mat-error>
+
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input type="password" matInput placeholder=" Confirm Password" formControlName="passwordConfirm">
+                            <mat-error *ngIf="passwordConfirm.touched && form.hasError('passwordConfirm')"> Password Not Matched</mat-error>
+                            <mat-hint *ngIf="!form.valid"><small> Please fill out all needed information</small></mat-hint>
+                        </mat-form-field>
+                        <div class="button">
+                            <button mat-button type="submit" [disabled]="!form.valid">Register</button>
+                        </div>
+                    </form>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

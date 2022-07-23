@@ -1,0 +1,37 @@
+<mat-toolbar>
+    <mat-toolbar-row class="justify-content-between">
+        <button mat-icon-button (click)="toggleSideBar()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="notification-icon" [matMenuTriggerFor]="notification" #menuTrigger >
+            <mat-icon matBadge="{{matBadge}}" matBadgeColor="warn" >notifications</mat-icon>  </button>
+
+            <mat-menu #notification="matMenu" xPosition="before"   >
+         
+                <button  class="sizeformenu" mat-menu-item *ngFor="let display of Display; first as displayElement"  >{{display}}</button> 
+                <button mat-menu-item *ngIf="displayElement"> Nothing Right Now </button>  
+            </mat-menu>
+        
+     
+        <div class="row mr-2 ml-auto">
+
+            <ul class="row m-0 align-items-center">
+
+                <li>
+                    <button mat-button [matMenuTriggerFor]="menu" class="user mt-2 d-flex align-items-center">
+                        <img src="../../../../assets/user.jpg" alt="" class="user-image mr-1 p-2" />
+                        Ujjwal
+                        <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu" >
+                        <button mat-menu-item (click)="logout()" >
+                            <mat-icon>exit_to_app</mat-icon>
+                            Logout
+                        </button>
+                    </mat-menu>
+                </li>
+            </ul>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

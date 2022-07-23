@@ -1,0 +1,25 @@
+@import "../home/home.component.scss";
+
+mat-form-field{
+    width: 100%;
+
+    
+  
+  }
+  
+  ::ng-deep {
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+       color: black;
+    }
+    mat-form-field {
+   
+       .mat-hint, input, ::placeholder, .mat-form-field-label {
+          color: black;
+       }
+    }
+ }
+  
+ .buttonsave{
+  width: 500px;
+ 
+  }

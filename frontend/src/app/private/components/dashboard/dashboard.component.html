@@ -1,0 +1,188 @@
+<div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2">Dashboard</div>
+  <div class="page__content shadow p-3 position-relative">
+
+    <div class="grid-container">
+
+      <mat-grid-list cols="4" rowHeight="250px">
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+          <mat-card class="dashboard-card red">
+            <mat-card-header>
+              <mat-card-title>
+                <div style="color: white;"> Expenses</div>
+                <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                  <mat-icon style="color: white;">more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu" xPosition="before">
+                  <button mat-menu-item>Expand</button>
+                  <button mat-menu-item>Remove</button>
+                </mat-menu>
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="dashboard-card-content">
+
+              <div style="font-size: 30px; color: white;">{{Expense_Content | currency:'RS '}}</div>
+            </mat-card-content>
+          </mat-card>
+
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+          <mat-card class="dashboard-card yellow">
+            <mat-card-header>
+              <mat-card-title>
+                <div style="color: black;"> Revenue</div>
+                <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu" xPosition="before">
+                  <button mat-menu-item>Expand</button>
+                  <button mat-menu-item>Remove</button>
+                </mat-menu>
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="dashboard-card-content">
+              <div style="font-size: 30px; color: black;">
+                {{Revenue_Content | currency:'RS '}} </div>
+
+            </mat-card-content>
+          </mat-card>
+
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+          <mat-card class="dashboard-card green">
+            <mat-card-header>
+              <mat-card-title>
+                <div style="color: black;"> Profit</div>
+
+                <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu" xPosition="before">
+                  <button mat-menu-item>Expand</button>
+                  <button mat-menu-item>Remove</button>
+                </mat-menu>
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="dashboard-card-content">
+
+              <div style="font-size: 30px; color: black;">{{Profit_Content | currency:'RS '}} </div>
+            </mat-card-content>
+          </mat-card>
+
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+          <mat-card class="dashboard-card blue">
+            <mat-card-header>
+              <mat-card-title>
+                <div style="color: white;"> Product</div> <button mat-icon-button class="more-button"
+                  [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                  <mat-icon style="color: white;">more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu" xPosition="before">
+                  <button mat-menu-item>Expand</button>
+                  <button mat-menu-item>Remove</button>
+                </mat-menu>
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="dashboard-card-content">
+
+              <div style="font-size: 30px; color: white;">{{Product_Content }}</div>
+            </mat-card-content>
+          </mat-card>
+
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="2" [rowspan]="2">
+          <mat-card class="dashboard-card">
+            <mat-card-header>
+              <mat-card-title>
+                Line Chart
+                <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu" xPosition="before">
+                  <button mat-menu-item>Expand</button>
+                  <button mat-menu-item>Remove</button>
+                </mat-menu>
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="dashboard-card-content">
+              <div>
+                <canvas id="LineChart"></canvas>
+              </div>
+            </mat-card-content>
+          </mat-card>
+
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="2" [rowspan]="2">
+          <mat-card class="dashboard-card">
+            <mat-card-header>
+              <mat-card-title>
+                Bar Graph
+                <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu" xPosition="before">
+                  <button mat-menu-item>Expand</button>
+                  <button mat-menu-item>Remove</button>
+                </mat-menu>
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="dashboard-card-content">
+              <div>
+                <canvas id="BarChart"></canvas>
+              </div>
+            </mat-card-content>
+          </mat-card>
+
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="2" [rowspan]="2">
+          <mat-card class="dashboard-card">
+            <mat-card-header>
+              <mat-card-title>
+               Pie Chart
+                <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu" xPosition="before">
+                  <button mat-menu-item>Expand</button>
+                  <button mat-menu-item>Remove</button>
+                </mat-menu>
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="dashboard-card-content">
+              <div class="pie">
+                <canvas id="PieChart" ></canvas>
+              </div>
+            </mat-card-content>
+          </mat-card>
+
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="2" [rowspan]="2">
+          <mat-card class="dashboard-card">
+            <mat-card-header>
+              <mat-card-title>
+               Radar Chart
+                <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu" xPosition="before">
+                  <button mat-menu-item>Expand</button>
+                  <button mat-menu-item>Remove</button>
+                </mat-menu>
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="dashboard-card-content">
+              <div class="radar">
+                <canvas id="RadarChart" ></canvas>
+              </div>
+            </mat-card-content>
+          </mat-card>
+
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+</div>
