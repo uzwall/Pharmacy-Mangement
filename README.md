@@ -1,5 +1,5 @@
 # Pharmacy-Mangement
-This is my first project of Pharmacy System Inventory Features 
+ project of Pharmacy System Inventory and sales analytics chart Features 
 
 # language used are:
 	Angular
